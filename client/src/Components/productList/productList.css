@@ -1,0 +1,14 @@
+
+.contacts-content {
+    display: flex;
+    flex-direction: column;
+
+  justify-content: center;
+   align-items: center;
+    flex-wrap: wrap;
+ 
+  margin: 5% 10%;
+  padding: 0 10px;
+  
+}
+
