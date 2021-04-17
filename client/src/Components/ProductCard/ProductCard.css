@@ -1,6 +1,7 @@
 .btn-icon{
-    width: 50px;
+    width: 200px;
     margin: 5px;
+    background-color: rgb(233, 156, 55);
 }
 
 .contact-card {
@@ -8,25 +9,25 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #BBBBBB;
-  border: 5px solid #747070;
+  background-color: #ffffff;
+  border: 2px solid #ffecec;
   border-radius: 30px;
   width: 210px;
-  height: 380px;
+  height: 400px;
   margin: 30px;
   padding: 20px;
 }
 .sousCard{
   background-color: #E2D5D5;
 }
-.avatar{
+.imgProd{
     width: 80px;
     margin: 15px 60px;
 }
 
 
 /* *****************************************nvCard***************************** */
-
+/* 
 
 
 
@@ -170,3 +171,6 @@ a {
 .fa {
     color: #FF5722
 }
+ */
+
+/* *********************css exp2************************ */

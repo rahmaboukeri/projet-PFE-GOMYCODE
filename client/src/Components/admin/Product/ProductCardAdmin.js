@@ -4,17 +4,18 @@ import { useDispatch } from "react-redux";
 import { Card,Button } from "react-bootstrap";
 
 // import  deleteBtn  from "../../assets/delete.png";
-import img1  from "../../assets/1.jpg";
-import editBtn from "../../assets/logo.jpg";
-import { deleteProduct, getOneProduct, ToggleTrue } from '../../JS/actions/actionProduct';
+// import img1  from "../../assets/1.jpg";
+import editBtn from "../../../assets/logo.jpg";
+import { deleteProduct, getOneProduct, ToggleTrue } from '../../../JS/actions/actionProduct';
 import { Link } from "react-router-dom";
-import prod1 from "../../assets/product/prod1.jpg";
+import prod1 from "../../../assets/product/prod1.jpg";
 
 
-import "./ProductCard.css"
+
+// import "./.css"
 
 
-const ProductCard = ({product}) => {
+const ProductCardAdmin = ({product}) => {
     const dispatch = useDispatch()
     return (
         // <div className="contact-card">
@@ -45,6 +46,7 @@ const ProductCard = ({product}) => {
 
 
 <div>
+{/* <h1>hello rahma</h1> */}
 
   <Card className="contact-card" style={{ width: '18rem' }}>
   <Card.Img variant="top" className="imgProd" src={prod1} />
@@ -56,12 +58,27 @@ const ProductCard = ({product}) => {
     </h3>
     <Card.Text >{product.description}</Card.Text>
       
-              <Link to={`/ProductDetails/${product._id}`}>
+              {/* <Link to={`/ProductDetails/${product._id}`}>
                     <Button className="btn-icon" 
                         alt="edit-icon" onClick={ ()=>{dispatch(ToggleTrue()); dispatch(getOneProduct(product._id) ) } } >Command NOW</Button>   
-                        </Link> 
+                        </Link>  */}
+       
 
   </Card.Body>
+       <div>
+                             
+                        <Button  className="btn-icon"
+                       style={{width:"100px"}}
+                        onClick={ ()=>dispatch(deleteProduct(product._id)) }
+                         > delete </Button> 
+
+                        <Link to="/editProduct" >
+                    <Button  className="btn-icon"
+                    style={{width:"100px"}}
+                        onClick={ ()=>{dispatch(ToggleTrue()); dispatch(getOneProduct(product._id) ) } } >  edit 
+                        </Button> 
+                        </Link>
+                        </div> 
 </Card>
 </div>
 
@@ -99,4 +116,4 @@ const ProductCard = ({product}) => {
     )
 }
 
-export default ProductCard
+export default ProductCardAdmin

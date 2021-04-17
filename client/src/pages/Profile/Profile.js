@@ -7,8 +7,8 @@ const Profile = () => {
   return (
     <div className="container profile">
       {/* /Breadcrumb */}
-      <div className="row gutters-sm">
-        <div className="col-md-4 mb-3">
+      <div className="row">
+        <div className="col-md-4 ">
           <div className="card">
             <div className="card-body">
               <div className="d-flex flex-column align-items-center text-center">
@@ -31,7 +31,7 @@ const Profile = () => {
          
         </div>
         <div className="col-md-8">
-          <div className="card mb-3">
+          <div className="card md-8">
             <div className="card-body">
               <div className="row">
                 <div className="col-sm-3">
@@ -57,6 +57,15 @@ const Profile = () => {
                 </div>
                 <div className="col-sm-9 text-secondary">
                   {(user && user.email) || ""}
+                </div>
+              </div>
+              <hr />
+                   <div className="row">
+                <div className="col-sm-3">
+                  <h6 className="mb-0">Role</h6>
+                </div>
+                <div className="col-sm-9 text-secondary">
+                  {(user && user.role) || ""}
                 </div>
               </div>
               <hr />

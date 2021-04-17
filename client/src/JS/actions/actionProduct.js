@@ -45,15 +45,14 @@ export const addProduct =(newProduct)=> async(dispatch)=>
 {
     dispatch({type: GET_PRODUCT_LOAD})
     try {
-        await axios.post(`/api/product/`,newProduct)
+        await axios.post(`/api/product/addProd`,newProduct)
+   
         dispatch(getProduct())
     } catch (error) {
         console.log(error)
     }
 }
 
-
-//update contact
 export const updateProduct =(id,newProduct)=> async(dispatch)=>
 {
     dispatch({type: GET_PRODUCT_LOAD})
@@ -64,6 +63,18 @@ export const updateProduct =(id,newProduct)=> async(dispatch)=>
         console.log(error)
     }
 }
+
+//update product
+// export const updateProduct =(id,newProduct)=> async(dispatch) =>
+// {
+//     dispatch({type: GET_PRODUCT_LOAD})
+//     try {
+//         await axios.put(`/api/product/${id}`,newProduct)
+//         dispatch(getProduct())
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
 
 //getOne contact
 export const getOneProduct =(id)=> async(dispatch)=>

@@ -13,13 +13,13 @@ const productSchema = new Schema({
     type: Number,
     required: true,
   },
-  category: { 
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Category",
-      required:true,
-    },
+  // category: { 
+  //     type: String,
+  //     ref: "Category",
+  //     required:true,
+  //   },
 
-    description:{
+  description:{
       type: String 
     
     }

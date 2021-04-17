@@ -32,7 +32,7 @@ router.get('/:id',getOneProduct)
 
 router.delete('/:_id',deleteProduct)
 
-router.put('/:_id',updateProduct);
+router.put('/:_id',updateProduct)
 
 
 module.exports = router

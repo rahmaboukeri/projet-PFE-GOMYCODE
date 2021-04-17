@@ -26,17 +26,22 @@ exports.getTest = async(req,res) =>{
                  * 
                  */
 exports.addProduct = async(req,res) => {
-                try {
-                        const { name, Price, category ,  } = req.body
-                       
+
+         try {
+                        const { name, Price, description } = req.body
+                        //mail and name are required
+                        if(!name || !Price ){ return res.status(400).send("mail and name are required")}
+
                         
-                        const newProduct = new Product({ name, Price, category  })
+                        const newProduct = new Product({ name, Price, description })
                         await newProduct.save()
                         res.status(200).send({msg : 'Product is saved', newProduct}) 
                                 
                   } catch (error) {
                        res.status(400).send({msg : 'Product not save', error})
                   }
+              
+
         
 }   
 
@@ -139,11 +144,10 @@ exports.deleteProduct =  async(req,res) => {
 
 exports.updateProduct = async(req,res) => {
                         try {
-                                const { _id } = req.params
+                                  const { _id } = req.params
                                   const productToUpdate =  await Product.updateOne({ _id } ,{$set:{...req.body} })
-                                  console.log(productToUpdate)
-                                res.status(200).send({ msg : 'this product updating ... ' })
+                                res.status(200).send({ msg : 'this product e updating ... ',productToUpdate })
                         } catch (error) {
-                                res.status(400).send({msg: 'can not deleted ... ',error })
+                                res.status(400).send({msg: 'cant updated ... ',error })
                         }
                 }                
