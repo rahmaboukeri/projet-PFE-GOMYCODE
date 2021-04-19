@@ -4,9 +4,9 @@ import { useDispatch } from "react-redux";
 import { Card,Button } from "react-bootstrap";
 
 // import  deleteBtn  from "../../assets/delete.png";
-import img1  from "../../assets/1.jpg";
-import editBtn from "../../assets/logo.jpg";
-import { deleteProduct, getOneProduct, ToggleTrue } from '../../JS/actions/actionProduct';
+// import img1  from "../../assets/1.jpg";
+// import editBtn from "../../assets/logo.jpg";
+import { getOneProduct, ToggleTrue } from '../../JS/actions/actionProduct';
 import { Link } from "react-router-dom";
 import prod1 from "../../assets/product/prod1.jpg";
 
@@ -57,9 +57,11 @@ const ProductCard = ({product}) => {
     <Card.Text >{product.description}</Card.Text>
       
               <Link to={`/ProductDetails/${product._id}`}>
+                  {/* <Link to={`/ProductDetails/ + ${product._id}`}> */}
+
                     <Button className="btn-icon" 
                         alt="edit-icon" onClick={ ()=>{dispatch(ToggleTrue()); dispatch(getOneProduct(product._id) ) } } >Command NOW</Button>   
-                        </Link> 
+                 </Link> 
 
   </Card.Body>
 </Card>

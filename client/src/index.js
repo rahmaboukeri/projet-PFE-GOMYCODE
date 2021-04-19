@@ -8,7 +8,7 @@ import { store } from "./JS/store/store";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
+// import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 ReactDOM.render(
   <BrowserRouter>

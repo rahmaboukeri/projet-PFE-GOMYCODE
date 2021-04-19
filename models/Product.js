@@ -22,7 +22,16 @@ const productSchema = new Schema({
   description:{
       type: String 
     
-    }
+    },
+  countInStock: {
+     type: Number,
+      default: 0,
+      required: true 
+    },
+    // reviews: {
+    //     userId: mongoose.Schema.Types.ObjectId , ref : "user",
+    //     review: String
+    // },
 
     /* created_at:{ type: Date, default: Date.now },
     updated_at:{ type: Date, default: Date.now }, */

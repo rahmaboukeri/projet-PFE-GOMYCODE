@@ -8,7 +8,8 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
 import PrivateRoute from "./router/PrivateRoute";
 import Navbar from "./Components/Navbar/Navbar";
-import Footer from "./Components/Footer";
+
+// import Footer from "./Components/Footer";
 
 import { currentUser } from "./JS/actions/user";
 
@@ -33,7 +34,7 @@ function App() {
 
   useEffect(() => {
     dispatch(currentUser());
-  }, []);
+  } );
 
   return (
     <div className="App">
@@ -57,7 +58,8 @@ function App() {
         <Route path="/productList" component={ProductList} />
         <Route path="/*" component={Errors} />
       </Switch>
-      <Footer />
+
+      {/* <Footer /> */}
     </div>
   );
 }

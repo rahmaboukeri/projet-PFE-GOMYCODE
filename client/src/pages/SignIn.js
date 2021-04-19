@@ -19,7 +19,7 @@ const SignIn = ({ history }) => {
     return () => {
       dispatch(videErrors());
     };
-  }, []);
+  }  );
 
   return (
     // <div className="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">

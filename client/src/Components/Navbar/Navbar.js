@@ -13,22 +13,37 @@ const Navbar = () => {
   return (
 
 <nav style={{backgroundColor:"black"}} className="navbar navbar-dark navbar-expand-md fixed-top navbar-collapse">
-  <div className="container-fluid"><a className="navbar-brand" href="/" style={{fontFamily:"Lucida Handwriting"}}>TURKISH TIME</a>
+  <div className="container-fluid">
+  <Link className="navbar-brand" to="/" style={{fontFamily:"Lucida Handwriting"}}>TURKISH TIME</Link> 
+   {/* <a className="navbar-brand" href="/" style={{fontFamily:"Lucida Handwriting"}}>TURKISH TIME</a> */}
         <button data-toggle="collapse" 
         className="navbar-toggler" data-target="#navcol-1">
             <span className="sr-only">Toggle navigation</span>
              <span className="navbar-toggler-icon" /></button>
     <div className="collapse navbar-collapse" id="navcol-1">
       <ul className="nav navbar-nav text-right text-white ml-auto">
-        <li className="nav-item" role="presentation"><a className="nav-link active" href="http://www.anteprestaurant.co.uk/wp-content/uploads/2014/05/antep-birmingham-turkish-restaurant.pdf">Menu PDF</a></li>
-        <li className="nav-item" role="presentation"><a className="nav-link" href="/productList">Our FOOD</a></li>
-                <li className="nav-item" role="presentation"><a className="nav-link" href="/contactUS">CONTACT</a></li>
+        <li className="nav-item" role="presentation">
+          {/* <a className="nav-link active" href="http://www.anteprestaurant.co.uk/wp-content/uploads/2014/05/antep-birmingham-turkish-restaurant.pdf">Menu PDF</a> */}
+          <Link className="nav-link active" to="http://www.anteprestaurant.co.uk/wp-content/uploads/2014/05/antep-birmingham-turkish-restaurant.pdf">Menu PDF</Link>
+          </li>
+        <li className="nav-item" role="presentation">
+          {/* <a className="nav-link" href="/productList">Our FOOD</a> */}
+              <Link className="nav-link" to="/productList" >Our FOOD</Link>
+          </li>
+    
+                <li className="nav-item" role="presentation">
+                  {/* <a className="nav-link" href="/contactUS">CONTACT</a> */}
+                  <Link className="nav-link" to="/contactUS">CONTACT</Link>
+                  </li>
 
 
         {
             isAuth && !( user && user.role===0 )?
             <Link to="/Admindashbored">
-           <li className="nav-item" role="presentation"><a className="nav-link" href="#">DashboredAdmin</a></li>
+           <li className="nav-item" role="presentation">
+             {/* <a className="nav-link" href="#">DashboredAdmin</a> */}
+             <Link className="nav-link" to="/Admindashbored" >DashboredAdmin</Link>
+             </li>
         </Link>
         : null
 
@@ -61,11 +76,11 @@ const Navbar = () => {
      
       ) : (
         <div className="btns">
-          <Link to="/signup">
+          <Link to="/signup" className="btn-area">
             {" "}
-            <a href="#" className="btn-area">
+            {/* <a href="#" className="btn-area"> */}
               SignUp
-            </a>
+            {/* </a> */}
           </Link>
 
           <Link to="/signin">

@@ -35,7 +35,7 @@ const GererProduct = ({ history }) => {
     
     
     return (
-        <div className="container">
+        <div className="container_prod">
             <Form>
                 <Form.Group >
                     <Form.Label>Name</Form.Label>

@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react'
-import { Button,Table } from 'react-bootstrap'
+// import { Button,Table } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router'
+import { Link } from 'react-router-dom'
 import { getOneProduct } from '../../JS/actions/actionProduct'
+import image from "../../assets/product/prod2.jpg";
 
 import "./ProductDetails.css"
 
@@ -18,32 +20,39 @@ const ProductDetails = () => {
 
 
     return (
-        <div style={{paddingTop:"5%"}}>
+        <div>
 
             {/* <h1>hello</h1>
             <h1>{Productt?.name}</h1> */}
+            <div>
+              <Link to="/productList"> Back to result</Link>
+            </div>
 
-                    // <Table striped bordered hover variant="light" >
-                    //     <thead>
-                    //         <tr>
-                    //         <th>#</th>
-                    //         <th>Name Food</th>
-                    //         <th>Price</th>
-                    //         <th>Description</th>
-                    //         <th></th>
-                    //         </tr>
-                    //     </thead>
-                    //     <tbody>
-                    //         <tr>
-                    //         <td>1</td>
-                    //         <td>{product?.name}</td>
-                    //         <td>{product?.Price}</td>
-                    //         <td>{product?.description}</td>
-                    //             <td> <Button> Confirme</Button>  </td>
-                    //         </tr>
+            
 
-                    //     </tbody>
-                    // </Table>
+
+                  <div clasName="details">
+                        <div className="details-images">
+                          <img src={image} alt="product" />
+                        </div>
+                        <div className="details-info">
+                           <ul>
+                            <li>	<h4>{product?.name}</h4>	</li>
+                            <li> <b>{product?.Price}</b> </li>
+                            <li>Description:
+                              <div> {product?.description} </div>
+                            </li>
+                          </ul>
+                        </div>
+                        
+                    </div>
+                                  
+
+
+
+
+
+
 
                     {/* <div className="cart_section">
   <div className="container-fluid">
