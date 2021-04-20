@@ -81,3 +81,39 @@ exports.SignIn = async (req, res) => {
     res.status(400).send({ errors: [{ msg: "can not get the currentUser" }] });
   }
 };
+
+
+
+//Get All Users
+exports.getAllUser = async (req, res)=>{
+  try {
+    const result = await User.find()
+    res.status(200).send({msg : 'Success To Get All Users...', users : result})
+  } catch (error) {
+    res.status(400).send({msg : "Can Not  all Users", error})
+  }
+}
+
+//update
+exports.update = async( req, res )=>{
+    try {
+        const result = await User.updateOne({_id : req.params.id}, {$set : req.body})
+        if(!result.nModified){
+            res.status(400).send({msg : "User Already Updated !!!", error})
+            return;
+        }
+        res.status(200).send({msg : 'User is Updated ...', result})
+    } catch (error) {
+        res.status(400).send({msg : "Can Not Updated ", error})
+    }
+}
+
+
+exports.getOneUser = async (req,res) => {
+                        try {
+                                const userToFind = await User.findOne({ _id: req.params.id })
+                                res.status(200).send({ msg: 'this is one user ... ', userToFind })
+                        } catch (error) {
+                                res.status(400).send({msg: 'can not get this id ... ',error })
+                        }
+                }

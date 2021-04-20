@@ -52,7 +52,7 @@ const ProductCard = ({product}) => {
   <Card.Body>
     <Card.Title > {product.name} </Card.Title>
     <h3>
-    <Card.Text style={{fontWeight:"bold",fontSize:"18px",color:"red"}}>  {product.Price} <span >DT</span>
+    <Card.Text style={{fontWeight:"bold",fontSize:"18px"}}>  {product.Price} <span >DT</span>
     </Card.Text>
     </h3>
     <Card.Text >{product.description}</Card.Text>

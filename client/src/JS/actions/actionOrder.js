@@ -1,5 +1,5 @@
 import axios from "axios"
-import { ADD_PRODUCT, GET_ALL_ORDER, LOAD_ORDER, FAIL_ORDER, DELETE_PRODUCT ,SUM_TOTAL} from "../actionTypes/TypeOrder"
+import { ADD_PRODUCT, GET_ALL_ORDER, LOAD_ORDER, FAIL_ORDER, DELETE_PRODUCT ,SUM_TOTAL, GET_ORDER_LOAD} from "../actionTypes/TypeOrder"
 
 
 //GET ALL Order
@@ -22,6 +22,7 @@ export const addOrder = (newOrder) => async (dispatch) =>{
         console.log(error);
         dispatch({ type: FAIL_ORDER, payload: error.response.data.errors })
     }
+    // localStorage.setItem("cart",JSON.stringify(getState().orderReducer.products));
 } 
 
 //update Order
@@ -58,3 +59,27 @@ export const sumTotal = (qty,Price,oldQty)=>
         payload:{qty,Price,oldQty}
     }
 }
+
+
+
+//DELET contact
+export const ProductOrderToDelete =(id)=> async(dispatch,getState)=>
+{
+    dispatch({type: GET_ORDER_LOAD})
+    try {
+        await axios.delete(`/api/order/delete/${id}`)
+        // dispatch({type: GET_CONTACTS_SUCCESS })
+        dispatch(getAllOrder())
+    } catch (error) {
+        console.log(error)
+    }
+        // localStorage.setItem("cart",JSON.stringify(getState().orderReducer.products));
+
+}
+
+
+// export const ResetCart = () => {
+//     return {
+//         type: RESET_CART,
+//     };
+// };

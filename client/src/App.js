@@ -9,7 +9,7 @@ import SignUp from "./pages/SignUp/SignUp";
 import PrivateRoute from "./router/PrivateRoute";
 import Navbar from "./Components/Navbar/Navbar";
 
-// import Footer from "./Components/Footer";
+import Footer from "./Components/Footer";
 
 import { currentUser } from "./JS/actions/user";
 
@@ -25,6 +25,9 @@ import ProductDetails from "./Components/ProductDetails/ProductDetails";
 import ProductListAdmin from "./Components/admin/Product/ProductListAdmin";
 import GererProduct from "./Components/admin/Product/GererProduct";
 import PrivateRouteAdmin from "./router/PriveteRouterAdmin";
+import OrderList from "./Components/admin/admindashbored/OrderList";
+import EditProfile from "./pages/Profile/EditProfile";
+import Bienvenue from "./Components/ProductDetails/Bienvenue";
 // import ContactUs from "./pages/ContactUs";
 
 
@@ -48,9 +51,15 @@ function App() {
         {/* <Route path="/contactUS" component={ContactUS} /> */}
         <PrivateRoute path="/productdetails" component={ProductDetails} />
         <PrivateRoute path="/profile" component={Profile} />
+        <PrivateRoute path="/editProfile" component={EditProfile} />
+         <PrivateRoute path="/Bienvenue" component={Bienvenue} />
+
         <PrivateRouteAdmin path="/Admindashbored" component={Admindashbored} />
         <PrivateRoute path="/productListAdmin" component={ProductListAdmin} />
+        <PrivateRoute path="/OrderList" component={OrderList} />
         <PrivateRoute path="/(addProduct|editProduct)" component={GererProduct} />
+
+        
 
         
 
@@ -59,7 +68,7 @@ function App() {
         <Route path="/*" component={Errors} />
       </Switch>
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

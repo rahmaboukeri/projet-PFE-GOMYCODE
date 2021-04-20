@@ -5,7 +5,7 @@ import { Card,Button } from "react-bootstrap";
 
 // import  deleteBtn  from "../../assets/delete.png";
 // import img1  from "../../assets/1.jpg";
-// import editBtn from "../../../assets/logo.jpg";
+import editBtn from "../../../assets/logo.jpg";
 import { deleteProduct, getOneProduct, ToggleTrue } from '../../../JS/actions/actionProduct';
 import { Link } from "react-router-dom";
 import prod1 from "../../../assets/product/prod1.jpg";
@@ -49,11 +49,11 @@ const ProductCardAdmin = ({product}) => {
 {/* <h1>hello rahma</h1> */}
 
   <Card className="contact-card" style={{ width: '18rem' }}>
-  <Card.Img variant="top" className="imgProd" src={prod1} alt="imgcardadmin" />
+  <Card.Img variant="top" className="imgProd" src={prod1} />
   <Card.Body>
     <Card.Title > {product.name} </Card.Title>
     <h3>
-    <Card.Text style={{fontWeight:"bold",fontSize:"18px",color:"red"}}>  {product.Price} <span >DT</span>
+    <Card.Text style={{fontWeight:"bold",fontSize:"18px"}}>  {product.Price} <span >DT</span>
     </Card.Text>
     </h3>
     <Card.Text >{product.description}</Card.Text>

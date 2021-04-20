@@ -1,11 +1,12 @@
 import React ,{useState,useEffect} from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch,useSelector } from 'react-redux';
 // import { useSelector } from 'react-redux';
 import image from "../../assets/product/prod2.jpg";
-import { sumTotal } from '../../JS/actions/actionOrder';
+import Delete from "../../assets/delete.png";
+import { ProductOrderToDelete, sumTotal } from '../../JS/actions/actionOrder';
 
 
-const Details = ({product}) => {
+const Details = ({product,order}) => {
 
 const [qty, setQty] = useState(1)
 const [oldQty, setOldQty] = useState(1)
@@ -30,6 +31,10 @@ useEffect(() => {
                                   <li className="cart_item clearfix">
                                     <div className="cart_item_image"><img src={image} alt /></div>
                                     <div className="cart_item_info d-flex flex-md-row flex-column justify-content-between">
+                                       <div className="cart_item_name cart_info_col" hidden>
+                                        <div className="cart_item_title"> id </div>
+                                        <div className="cart_item_text">{order?.id} </div>
+                                      </div>
                                       <div className="cart_item_name cart_info_col">
                                         <div className="cart_item_title"> Name </div>
                                         <div className="cart_item_text">{product?.name} </div>
@@ -45,7 +50,10 @@ useEffect(() => {
                                         <div className="cart_item_title">Price</div>
                                         <div className="cart_item_text"> {product?.Price}  </div>
                                       </div>
-                                      
+                                      <div>
+                                          <img src={Delete} alt="delete" style={{width:"30px"}} 
+                                               onClick={ ()=>dispatch(ProductOrderToDelete(product.id)) } /> 
+                                      </div>
                                     </div>
                                   </li>
                                 </ul>

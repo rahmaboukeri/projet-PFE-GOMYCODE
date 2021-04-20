@@ -2,9 +2,11 @@ const { GET_ALL_ORDER, ADD_PRODUCT, LOAD_ORDER, DELETE_PRODUCT, SUM_TOTAL } = re
 
 
 const initialState ={
+    order:{},
     orders :[],
     products: [],
     sumPrice : 0,
+    qty: 1,
     loadOrder : false
 }
 
@@ -35,14 +37,18 @@ const orderReducer = (state=initialState,{ type, payload })=>{
                 sumPrice : state.sumPrice > (product.Price * payload.qty) ? state.price - (product.Price * payload.qty) : 0 ,
                 loadOrder : false
             }  ;
+            
 
              case SUM_TOTAL : 
+             const qty=payload.qty
             return{
                 ...state,
-                sumPrice : payload.oldQty>payload.qty ? state.sumPrice - (payload.Price * (payload.oldQty - (payload.qty))):
+                sumPrice : payload.oldQty>qty ? state.sumPrice - (payload.Price * (payload.oldQty - (payload.qty))):
                 state.sumPrice + (payload.Price * ((payload.qty) - payload.oldQty))
               
-            }    
+            }  ;
+        //     case RESET_CART:
+        // localStorage.removeItem("cart");  
            
         default:
             return state

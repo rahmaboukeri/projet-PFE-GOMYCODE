@@ -5,6 +5,8 @@ import {
   LOGIN_USER,
   REGISTER_USER,
   LOGOUT_USER,
+  GET_ALL_USERS,
+  GET_ONE_USER
 } from "../actionTypes/user";
 
 const initialState = {
@@ -55,6 +57,15 @@ const userReducer = (state = initialState, { type, payload }) => {
         user: {},
         isAuth: false,
       };
+       case GET_ONE_USER : 
+       return{ ...state,user: payload};
+
+      case GET_ALL_USERS:
+        return {
+          ...state,
+          loadUser: false,
+          users : payload.users
+        };
     case "VIDE_ERRORS":
       return { ...state, errors: [] };
     default:

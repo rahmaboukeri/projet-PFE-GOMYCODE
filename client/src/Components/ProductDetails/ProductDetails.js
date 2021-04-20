@@ -9,9 +9,10 @@ import Details from './Details'
 import { addOrder } from '../../JS/actions/actionOrder'
 
 
-const ProductDetails = () => {
+const ProductDetails = ({history}) => {
 
   const [sumTotal, setSumTotal] = useState(0)
+  const [qty, setQty] = useState(1)
 
  
     // const product = useSelector(state => state.productReducer.product)
@@ -24,6 +25,7 @@ const ProductDetails = () => {
      const order=useSelector((state)=>state.orderReducer.orders)
 
      const sumPrice=useSelector((state)=>state.orderReducer.sumPrice)
+     const qtySum=useSelector((state)=>state.orderReducer.qty)
      
 
      const [productData, setProductData] = useState([])
@@ -37,6 +39,7 @@ const ProductDetails = () => {
 useEffect(() => {
  setSumTotal(sumPrice)
 }, [sumPrice])
+
 
 
     return (
@@ -59,7 +62,7 @@ useEffect(() => {
                             {
                               productData.length &&
                               productData.map(product =>
-                               <Details product={product} key={product._id}  /> )
+                               <Details product={product} key={product._id} order={order}  /> )
                             }
                               <div className="order_total">
                                 <div className="order_total_content text-md-right">
@@ -70,9 +73,12 @@ useEffect(() => {
                               <div className="cart_buttons">
                                 <Link to="/productList"><button type="button" className="button cart_button_clear">
                                   Continue Shopping</button></Link> 
+                                  <Link to="/Bienvenue" >
                                    <button type="button" className="button cart_button_checkout"
-                                   onClick={() => dispatch(addOrder({userId:user?._id,product:productData,sum:sumPrice}))}
-                                   >Add to Cart</button> </div>
+                                   onClick={() => dispatch(addOrder({userId:user?._id,product:productData,sum:sumPrice,qty:qtySum}) , history.push("/Bienvenue") )}
+                                   >Add to Cart</button> 
+                                   </Link>
+                                   </div>
                             </div>
                           </div>
                         </div>

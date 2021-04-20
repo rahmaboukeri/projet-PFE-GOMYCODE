@@ -5,6 +5,8 @@ import {
   LOGIN_USER,
   REGISTER_USER,
   LOGOUT_USER,
+  GET_ALL_USERS,
+  GET_ONE_USER
 } from "../actionTypes/user";
 
 import axios from "axios";
@@ -59,6 +61,38 @@ export const logout = () => {
     type: LOGOUT_USER,
   };
 };
+
+
+//Get All Users
+export const getAllUsers = () => async (dispatch) =>{
+  try {
+      const result = await axios.get('/api/user/')
+      dispatch({type : GET_ALL_USERS , payload: result.data})
+  } catch (error) {
+      console.log(error)
+  }
+}
+
+//Update User
+export const updateUser = ( id, newUser ) => async (dispatch) =>{
+    try {
+        await axios.put(`/api/user/update/${id}`, newUser)
+        dispatch(currentUser())
+    } catch (error) {
+        console.log(error)
+    }
+}
+export const getOneUser =(id)=> async(dispatch)=>
+{
+    dispatch({type: LOAD_USER})
+    try {
+        const res = await axios.get(`/api/user/${id}`)
+        dispatch({type : GET_ONE_USER,payload : res.data})
+        console.log(res.data)
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 export const videErrors = () => {
   return {

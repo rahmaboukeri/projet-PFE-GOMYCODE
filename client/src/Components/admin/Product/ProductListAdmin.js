@@ -42,16 +42,8 @@ const ProductListAdmin = () => {
                     ) }
              </div>
             }        
-           {/* <h1>helloooooooo</h1>                   */}
         </div>
 
-            //  <div className="products-content"  style={{flexDirection:"column"}}>
-            //      {products.map(product => 
-            //         <ProductCard  product={product} key={product._id} />
-            //         // <h1>hello liste</h1>
-            //         ) }
-            //  </div>
-                                     
         
     )
 }

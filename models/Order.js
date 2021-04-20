@@ -15,6 +15,10 @@ const orderSchema = new Schema({
     sum: {
         type: Number,
         default:0
+    },
+       qty: {
+        type: Number,
+        default:1
     }
  
   },{ timestamps: true })

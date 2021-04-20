@@ -114,7 +114,7 @@ const SignIn = ({ history }) => {
                   </div>
                   <div className="col-md-6 rcol">
                     <form className="sign-up">
-                      <h2 className="heading mb-4">Sign up</h2>
+                      <h2 className="heading mb-4">Sign In</h2>
                                   {errors.length > 0 ? errors.map((el) => <Errors error={el} />) : null}
 
 

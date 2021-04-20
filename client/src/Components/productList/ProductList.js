@@ -24,10 +24,8 @@ const ProductList = () => {
         
 
                         <div className="contacts-content"> 
-
-                <div className="card-headerr">
-            <Form inline >
-                    <FormControl
+    <Form inline style={{padding:"4% 30%"}} >
+                    <FormControl 
                     onChange={(e) => setFilterName(e.target.value)}
                     value={filterName}
                     type="text"
@@ -35,6 +33,8 @@ const ProductList = () => {
                     className="mr-sm-2"
                     />
             </Form>
+                <div className="card-headerr">
+        
             </div>
 
            { isLoading ?   <Spinner animation="border" style={{width:"300px",height:"300px"}} variant="danger" />

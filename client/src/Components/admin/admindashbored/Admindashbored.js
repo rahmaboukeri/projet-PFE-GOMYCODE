@@ -37,18 +37,22 @@ const Admindashbored = () => {
             <div className="h5">Hello Admin</div>
             <div>Logged in as:  </div>
           </div>
-          <div className="d-flex my-4 flex-wrap">
-            <div className="box me-4 my-1 bg-light"> <img src="https://www.freepnglogos.com/uploads/box-png/cardboard-box-brown-vector-graphic-pixabay-2.png" alt="mpp" />
-              <div className="d-flex align-items-center mt-2">
-                <div className="tag">commande</div>
-                <div className="ms-auto number">10</div>
-              </div>
-            </div>
+
+                    <div className="d-flex my-4 flex-wrap">
+         <Link to="/OrderList" >         
+                        <div className="box me-4 my-1 bg-light"> <img src="https://www.freepnglogos.com/uploads/box-png/cardboard-box-brown-vector-graphic-pixabay-2.png" alt="mpp" />
+                          <div className="d-flex align-items-center mt-2">
+                            <div className="tag">commande</div>
+                            <div className="ms-auto number"></div>
+                          </div>
+                    </div>
+          </Link>
+      
             <Link to="/productListAdmin">
             <div className="box me-4 my-1 bg-light"> <img src="https://www.freepnglogos.com/uploads/shopping-cart-png/shopping-cart-campus-recreation-university-nebraska-lincoln-30.png" alt="mop" />
               <div className="d-flex align-items-center mt-2">
                 <div className="tag">Gerer prodcut</div>
-                <div className="ms-auto number">10</div>
+                <div className="ms-auto number"></div>
               </div>
               
             </div>
@@ -56,7 +60,7 @@ const Admindashbored = () => {
             <div className="box me-4 my-1 bg-light"> <img src="https://www.freepnglogos.com/uploads/love-png/love-png-heart-symbol-wikipedia-11.png" alt="mpu" />
               <div className="d-flex align-items-center mt-2">
                 <div className="tag">Gerer category</div>
-                <div className="ms-auto number">10</div>
+                <div className="ms-auto number"></div>
               </div>
             </div>
           </div>

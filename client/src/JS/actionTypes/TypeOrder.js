@@ -5,3 +5,5 @@ export const LOAD_ORDER = "LOAD_ORDER";
 export const FAIL_ORDER= "FAIL_ORDER";
 export const ADD_PRODUCT= "ADD_PRODUCT";
 export const SUM_TOTAL= "SUM_TOTAL";
+export const GET_ORDER_LOAD="ET_ORDER_LOAD"
+export const RESET_CART="RESET_CART"
