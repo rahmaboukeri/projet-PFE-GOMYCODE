@@ -6,12 +6,13 @@ import { Card,Button } from "react-bootstrap";
 // import  deleteBtn  from "../../assets/delete.png";
 // import img1  from "../../assets/1.jpg";
 // import editBtn from "../../assets/logo.jpg";
-import { getOneProduct, ToggleTrue } from '../../JS/actions/actionProduct';
+// import { getOneProduct, ToggleTrue } from '../../JS/actions/actionProduct';
 import { Link } from "react-router-dom";
 import prod1 from "../../assets/product/prod1.jpg";
 
 
 import "./ProductCard.css"
+import { addProduct } from '../../JS/actions/actionOrder';
 
 
 const ProductCard = ({product}) => {
@@ -56,11 +57,11 @@ const ProductCard = ({product}) => {
     </h3>
     <Card.Text >{product.description}</Card.Text>
       
-              <Link to={`/ProductDetails/${product._id}`}>
+              <Link to={`/ProductDetails`}>
                   {/* <Link to={`/ProductDetails/ + ${product._id}`}> */}
 
                     <Button className="btn-icon" 
-                        alt="edit-icon" onClick={ ()=>{dispatch(ToggleTrue()); dispatch(getOneProduct(product._id) ) } } >Command NOW</Button>   
+                        alt="edit-icon" onClick={ ()=>{dispatch(addProduct(product) ) } } >Command NOW</Button>   
                  </Link> 
 
   </Card.Body>

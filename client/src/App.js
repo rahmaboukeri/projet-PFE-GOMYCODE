@@ -46,7 +46,7 @@ function App() {
         <Route path="/signin" component={SignIn} />
         <Route path="/signup" component={SignUp} />
         {/* <Route path="/contactUS" component={ContactUS} /> */}
-        <PrivateRoute path="/productdetails/:id" component={ProductDetails} />
+        <PrivateRoute path="/productdetails" component={ProductDetails} />
         <PrivateRoute path="/profile" component={Profile} />
         <PrivateRouteAdmin path="/Admindashbored" component={Admindashbored} />
         <PrivateRoute path="/productListAdmin" component={ProductListAdmin} />

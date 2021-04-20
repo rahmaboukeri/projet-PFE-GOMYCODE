@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { getProduct } from "../../JS/actions/actionProduct";
 import  ProductCard  from "../ProductCard/ProductCard";
 
-import { Spinner } from "react-bootstrap";
+import { Spinner,Form,FormControl } from "react-bootstrap";
 
 import "./productList.css"
 
@@ -16,29 +16,42 @@ const ProductList = () => {
     useEffect (() =>{
             dispatch(getProduct())
     }, [dispatch])
+
+
+    const [filterName, setFilterName] = useState("");
     
     return (
         
 
                         <div className="contacts-content"> 
+
+                <div className="card-headerr">
+            <Form inline >
+                    <FormControl
+                    onChange={(e) => setFilterName(e.target.value)}
+                    value={filterName}
+                    type="text"
+                    placeholder="Search"
+                    className="mr-sm-2"
+                    />
+            </Form>
+            </div>
+
            { isLoading ?   <Spinner animation="border" style={{width:"300px",height:"300px"}} variant="danger" />
 
             :
              <div className="contacts-content">
-                 {products.map(product => 
+                 {products.filter((category) =>
+                    category.name.toLowerCase().includes(filterName.toLowerCase())
+                )
+                
+                 .map(product => 
                     <ProductCard product={product} key={product._id} />
                     ) }
              </div>
             }                         
         </div>
 
-            //  <div className="products-content"  style={{flexDirection:"column"}}>
-            //      {products.map(product => 
-            //         <ProductCard  product={product} key={product._id} />
-            //         // <h1>hello liste</h1>
-            //         ) }
-            //  </div>
-                                     
         
     )
 }

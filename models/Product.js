@@ -23,9 +23,9 @@ const productSchema = new Schema({
       type: String 
     
     },
-  countInStock: {
+  qty: {
      type: Number,
-      default: 0,
+      default: 1,
       required: true 
     },
     // reviews: {

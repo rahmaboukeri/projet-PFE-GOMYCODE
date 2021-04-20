@@ -17,6 +17,9 @@ app.use('/api/product',routesproduct)
 const routescateg = require("./router/category")
 app.use('/api/category/',routescateg)
 
+const routesorder = require("./router/order")
+app.use('/api/order/',routesorder)
+
 
 const PORT = process.env.PORT;
 
