@@ -1,6 +1,7 @@
 const express = require("express");
 const connectDB = require("./config/connectDB");
 require("dotenv").config();
+const path = require('path')
 
 const app = express();
 
@@ -20,6 +21,15 @@ app.use('/api/category/',routescateg)
 const routesorder = require("./router/order")
 app.use('/api/order/',routesorder)
 
+
+//sever static assets if in producion
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+  //set static folder
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
 
 const PORT = process.env.PORT;
 
