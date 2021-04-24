@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Spinner,Button } from "react-bootstrap";
-import { Link } from 'react-router-dom'
+import { Spinner } from "react-bootstrap";
+// import { Link } from 'react-router-dom'
 
 import { getAllOrder } from '../../../JS/actions/actionOrder'
-import OrderCard from './OrderCard';
+// import OrderCard from './OrderCard';
 
 const OrderList = () => {
 
@@ -14,7 +14,7 @@ const OrderList = () => {
 
     const loadOrder = useSelector(state => state.orderReducer.loadOrder)
 
-     const user = useSelector(state => state.userReducer.user)
+    //  const user = useSelector(state => state.userReducer.user)
 
      const [ordersData, setOrdersData] = useState([])
 

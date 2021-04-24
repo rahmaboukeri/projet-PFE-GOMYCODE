@@ -4,9 +4,9 @@ import { Carousel } from "react-bootstrap";
 import slide1 from "../assets/slide/slide1.jpg";
 import slide2 from "../assets/slide/slide2.jpg";
 import slide3 from "../assets/slide/slide3.jpg";
-import  prod1  from "../assets/product/prod1.jpg";
-import  prod2  from "../assets/product/prod2.jpg";
-import  prod3  from "../assets/product/prod3.jpg";
+// import  prod1  from "../assets/product/prod1.jpg";
+// import  prod2  from "../assets/product/prod2.jpg";
+// import  prod3  from "../assets/product/prod3.jpg";
 
 
 
@@ -21,22 +21,7 @@ const Acceuil = () => {
                     <section>
                       <div>
                                     
-                                    {/* <Carousel style={{height:"300px"}} >
-                                                  <div >
-                                                      <img src={slide1} />
-                                                      <p className="legend">kounafa</p>
-                                                  </div>
-                                                  <div>
-                                                      <img src={slide2} />
-                                                      <p className="legend"></p>
-                                                  </div>
-                                                  <div>
-                                                      <img src={slide3} />
-                                                      <p className="legend"></p>
-                                                  </div>
-                                      </Carousel> */}
-
-                <Carousel>
+                    <Carousel>
                       <Carousel.Item>
                         <img style={{height:"500px"}}
                           className="d-block w-100"
@@ -121,54 +106,7 @@ const Acceuil = () => {
 
 
 
-{/* 
 
-
-                <section >
-
-                <div  className="container"  style={{flexDirection:"column", padding:"3% 10%"}}>
-
-                        <div className="container d-flex r" >
-                          <div className="row">
-                            
-                          
-                                <div className="col-md-4" style={{boxShadow: "20px 20px 60px #cacaca, -20px -20px 60px #ffffff",padding:"15px"}}>
-                                  <div className="d-flex sale ">
-                                    <div className="btn" style={{backgroundColor:"orange",fontWeight:"bold"}}> 20  <span>DT</span></div>
-                                  </div> 
-                                  <img className="mx-auto img-thumbnail" src={prod1} width="auto" height="auto" />
-                                  <div className="card-body text-center mx-auto">
-                                    <h4 className="card-title"> Mantı: </h4>
-                                  </div>
-                                </div>
-                                <div className="col-md-4" style={{boxShadow: "20px 20px 60px #cacaca, -20px -20px 60px #ffffff"}}>
-                                  <div className="d-flex sale ">
-                                    <div className="btn" style={{backgroundColor:"orange",fontWeight:"bold"}}> 20  <span>DT</span></div>
-                                  </div>
-                                  <img className="mx-auto img-thumbnail" src={prod2} width="auto" height="auto" />
-                                  <div className="card-body text-center mx-auto">
-                                    <h4 className="card-title"> Şiş Kebap </h4>
-                                  </div>
-                                </div>
-                                <div className="col-md-4" style={{boxShadow: "20px 20px 60px #cacaca, -20px -20px 60px #ffffff"}} >
-                                  <div className="d-flex sale ">
-                                    <div className="btn" style={{backgroundColor:"orange",fontWeight:"bold"}}> 20  <span>DT</span>
-                                    </div>
-                                  </div> 
-                                  <img className="mx-auto img-thumbnail" src={prod3} width="auto" height="auto" />
-                                  <div className="card-body text-center mx-auto">
-                                    <h4 className="card-title"> Pide </h4>
-                                  </div>
-                                </div>
-
-                        
-                                </div>
-                        </div>
-                </div>
-
-
-                </section>
- */}
 
                 </main>
 </div>

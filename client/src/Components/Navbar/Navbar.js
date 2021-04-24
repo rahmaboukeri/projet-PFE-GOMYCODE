@@ -62,9 +62,10 @@ const Navbar = () => {
         <div>
           <Link to="/" onClick={() => dispatch(logout())}>
           {" "}
-          <a href="#" className="btn-area">
-            Logout
-          </a>
+          {/* <a href="#" className="btn-area"> */}
+          <span className="btn-area">Logout</span>
+            
+          {/* </a> */}
         </Link> 
         <Link to="/profile">
             <span style={{color:"white"}}>{ user && user.name }</span> 
@@ -84,9 +85,10 @@ const Navbar = () => {
           </Link>
 
           <Link to="/signin">
-            <a href="#" className="btn-area">
+            {/* <a href="#" className="btn-area"> */}
+                <span className="btn-area">SignIn</span>
               SignIn
-            </a>
+            {/* </a> */}
           </Link>
         </div>
       )}

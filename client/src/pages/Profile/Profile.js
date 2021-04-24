@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-import edit from "../../assets/edit.png"
+// import edit from "../../assets/edit.png"
 import { updateUser } from "../../JS/actions/user";
 
 import "./Profile.css";

@@ -5,7 +5,7 @@ import { Card,Button } from "react-bootstrap";
 
 // import  deleteBtn  from "../../assets/delete.png";
 // import img1  from "../../assets/1.jpg";
-import editBtn from "../../../assets/logo.jpg";
+// import editBtn from "../../../assets/logo.jpg";
 import { deleteProduct, getOneProduct, ToggleTrue } from '../../../JS/actions/actionProduct';
 import { Link } from "react-router-dom";
 import prod1 from "../../../assets/product/prod1.jpg";

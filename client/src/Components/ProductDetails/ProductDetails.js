@@ -12,7 +12,7 @@ import { addOrder } from '../../JS/actions/actionOrder'
 const ProductDetails = ({history}) => {
 
   const [sumTotal, setSumTotal] = useState(0)
-  const [qty, setQty] = useState(1)
+  // const [qty, setQty] = useState(1)
 
  
     // const product = useSelector(state => state.productReducer.product)

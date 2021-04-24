@@ -1,10 +1,10 @@
 import React from 'react'
-import { useDispatch } from "react-redux";
-import { Card,Button } from "react-bootstrap";
+// import { useDispatch } from "react-redux";
+// import { Card,Button } from "react-bootstrap";
 
-import { getAllOrder, sumTotal } from '../../../JS/actions/actionOrder';
-import { Link } from "react-router-dom";
-import prod1 from "../../../assets/product/prod1.jpg";
+// import { getAllOrder, sumTotal } from '../../../JS/actions/actionOrder';
+// import { Link } from "react-router-dom";
+// import prod1 from "../../../assets/product/prod1.jpg";
 
 const OrderCard = ({order}) => {
     

@@ -1,5 +1,5 @@
 import React ,{useState,useEffect} from 'react'
-import { useDispatch,useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 // import { useSelector } from 'react-redux';
 import image from "../../assets/product/prod2.jpg";
 import Delete from "../../assets/delete.png";
@@ -29,7 +29,7 @@ useEffect(() => {
           <div className="cart_items">
                                 <ul className="cart_list">
                                   <li className="cart_item clearfix">
-                                    <div className="cart_item_image"><img src={image} alt /></div>
+                                    <div className="cart_item_image"><img src={image} alt="imgage1" /></div>
                                     <div className="cart_item_info d-flex flex-md-row flex-column justify-content-between">
                                        <div className="cart_item_name cart_info_col" hidden>
                                         <div className="cart_item_title"> id </div>

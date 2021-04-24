@@ -18,13 +18,15 @@ const Admindashbored = () => {
           <div className="h4 text-white">Account</div>
           <ul>
     
-            <li> <a href="#" className="text-decoration-none d-flex align-items-start">
+            <li> <span className="text-decoration-none d-flex align-items-start">
+
+              {/* <a href="#" className="text-decoration-none d-flex align-items-start"> */}
                 <div className="fas fa-box-open pt-2 me-3" />
                 <div className="d-flex flex-column">
                   <div className="link">My Orders</div>
                   <div className="link-desc">View &amp; Manage orders and returns</div>
                 </div>
-              </a> </li>
+              </span> </li>
         
       
         

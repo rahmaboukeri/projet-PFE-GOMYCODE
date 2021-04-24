@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 import './Footer.css'
 
@@ -13,13 +13,13 @@ const Footer = () => {
                         <h3>CONTACT US</h3>
                         <lu>
                                 <li >
-                                    <a href="#!">Phone : (216) 71223335</a>
+                                    Phone : (216) 71223335
                                 </li>
                                 <li >
-                                    <a href="#!">Mail: turkishheart145@gmail.com</a>
+                                    Mail: turkishheart145@gmail.com
                                 </li>
                                 <li >
-                                    <a href="#!">Menu</a>
+                                    Menu
                                 </li>
                         </lu>        
                     </div>
